@@ -1,0 +1,33 @@
+.row {
+  color: white;
+  margin-left: 20px;
+}
+
+.row_posters {
+  display: flex; /*it will convert the multiple posters in vertical row to horizontal row.*/
+  overflow-y: hidden;
+  overflow-x: scroll; /*creates scrolls for each poster row*/
+  padding: 12px;
+}
+.row_posters::-webkit-scrollbar {
+  /*webkit-scrollbar is used to tell all the browers to not to display scroll but keep its functinality.*/
+  display: none;
+}
+
+.row_poster {
+  object-fit: contain; /*it makes the poster responsive*/
+  width: 100%;
+  max-height: 100px; /*height could dec for responsive but can't exceeds it.*/
+  transition: transform 450ms; /* it will take 450ms to load the poster*/
+  /*It also creates slower effect on hover*/
+  margin-right: 10px;
+}
+.row_poster:hover {
+  transform: scale(1.08);
+}
+.row_posterLarge {
+  max-height: 250px;
+}
+.row_posterLarge:hover {
+  transform: scale(1.09);
+}
